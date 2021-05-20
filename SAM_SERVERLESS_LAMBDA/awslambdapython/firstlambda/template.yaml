@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  firstlambda
+
+  Sample SAM Template for firstlambda
+
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: hello_world/
+      # Handler: app.first_lambda
+      Handler: coldstart.cold_start
+      Runtime: python3.8
+      # Handler: datatypes.dict_types
+      # Environment:
+      #   Variables:
+      #     param1:Fred
+      #     param2:Jabbari
+      Environment:
+        Variables:
+          param1: 'admin1111111111111111111111111111111'
+          param2: 'admin2222222222222222222222222222222'
